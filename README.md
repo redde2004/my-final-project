@@ -14,6 +14,8 @@ Make sure the following libraries are installed:
 Run each cell in order starting from loading the dataset to the final model comparison.
 
 ## Results Summary
-Two models were used in this project: Random Forest and Decision Tree. Both models did very well and were able to correctly classify all samples in the dataset. This suggests that the features in the dataset were clearly separated as normal and abnormal cells without error.
+Two models were used in this project: Decision Tree and Random Forest. After adding engineered features and optimizing both models, the Decision Tree achieved an accuracy of 0.83, while the Random Forest achieved an accuracy of 0.81. These results are more realistic compared to the initial draft, where both models achieved perfect accuracy, indicating that the updated model is learning meaningful patterns rather than memorizing the data.
 
-Even though Random Forest is a more complex model, the Decision Tree produced the same results. Because of this, the simpler model may be easier to use and understand while still maintaining strong performance.
+The results show that features related to cell size, especially cell diameter and its interaction with nucleus area, play an important role in classification. Visualizations and feature importance analysis confirmed that cell diameter has a stronger relationship with the anomaly label compared to nucleus area alone. This supports the original goal of the project, which was to determine whether these features could help identify abnormal cells.
+
+Overall, the Decision Tree performed slightly better while also being simpler and easier to interpret. Based on these results, the Decision Tree is recommended for this problem because it provides strong performance while making the relationship between features and predictions clearer. The model should be used as a support tool rather than a fully automated system, with human review included for important decisions. This ensures accuracy while still benefiting from the model’s ability to identify patterns in the data.
